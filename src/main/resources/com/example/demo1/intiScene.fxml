@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.collections.FXCollections?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="759.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.HelloController">
+   <children>
+      <Accordion layoutX="83.0" layoutY="72.0" />
+      <TextField fx:id="apiKey" layoutX="95.0" layoutY="37.0" prefHeight="23.0" prefWidth="366.0" />
+      <TextField fx:id="secret" layoutX="95.0" layoutY="80.0" prefHeight="23.0" prefWidth="366.0" />
+      <Text layoutX="36.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="APIKEY" />
+      <Text layoutX="35.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SECRIT" />
+      <TextArea fx:id="addressStatus" layoutX="95.0" layoutY="171.0" prefHeight="153.0" prefWidth="366.0" wrapText="true" />
+      <Button fx:id="startMine" layoutX="110.0" layoutY="565.0" mnemonicParsing="false" onAction="#startMineEvent" text="开始" />
+      <Button fx:id="stopMine" layoutX="380.0" layoutY="565.0" mnemonicParsing="false" onAction="#stopMineEvent" text="结束" />
+      <TextArea fx:id="mineLog" layoutX="95.0" layoutY="332.0" prefHeight="206.0" prefWidth="366.0" wrapText="true" />
+      <Text layoutX="23.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="账号状态" />
+      <Text layoutX="23.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="打新日志" />
+      <Button fx:id="addAccount" layoutX="514.0" layoutY="80.0" mnemonicParsing="false" onAction="#addAccount" text="添加" />
+      <Button fx:id="cleanAccount" layoutX="576.0" layoutY="80.0" mnemonicParsing="false" onAction="#cleanAccount" text="重置" />
+      <Button fx:id="deleteAccount" layoutX="641.0" layoutY="80.0" mnemonicParsing="false" onAction="#deleteAccount" prefHeight="23.0" prefWidth="40.0" text="删除" />
+      <ChoiceBox fx:id="enation" layoutX="549.0" layoutY="435.0" onAction="#selectEnation" prefWidth="150.0" value="OKEX">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:id="1" fx:value="OKEX" />
+               <String fx:id="2" fx:value="Bybit 暂不可用" />
+            </FXCollections>
+         </items>
+      </ChoiceBox>
+      <Text layoutX="483.0" layoutY="451.0" strokeType="OUTSIDE" strokeWidth="0.0" text="选择平台" wrappingWidth="48.0" />
+      <Text layoutX="489.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="交易对" />
+      <TextField fx:id="pair" layoutX="544.0" layoutY="170.0" />
+      <Text layoutX="495.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="价格" />
+      <TextField fx:id="price" layoutX="544.0" layoutY="228.0" />
+      <Text layoutX="495.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="数量" />
+      <TextField fx:id="num" layoutX="544.0" layoutY="294.0" />
+      <Text layoutX="483.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="开盘时间" />
+      <TextField fx:id="startTime" layoutX="544.0" layoutY="364.0" />
+      <Text layoutX="30.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="passPhase" />
+      <TextField fx:id="passPhase" layoutX="95.0" layoutY="124.0" />
+   </children>
+</Pane>
